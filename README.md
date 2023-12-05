@@ -11,6 +11,16 @@
 - Guides through setting up ZFS encryption with a passphrase.
 - Automatically mounts the encrypted dataset to a specified directory.
 
+## Script Explanation
+- Shebang and Error Handling: Starts with a shebang for Bash and uses set -e to halt on any error.
+- Warning and Confirmation Prompts: Displays warnings about the potential risks of disk operations and requires user confirmation to proceed.
+- Disk Selection: Prompts the user to input names for two disks to be used in the ZFS pool.
+- Passphrase Setup: Requests a passphrase for ZFS encryption and confirms it, ensuring the user enters the same passphrase twice.
+- ZFS Pool Creation: Creates a mirrored ZFS pool using the specified disks.
+- Encrypted Dataset Creation: Sets up an encrypted ZFS dataset within the mirrored pool.
+- Dataset Mounting: Mounts the encrypted dataset to /mnt/my_raid.
+- Completion Notification: Informs the user upon successful completion of the setup.
+
 ## Prerequisites
 - A Linux system with ZFS installed.
 - Knowledge of disk partitioning and ZFS pool management.
